@@ -35,6 +35,11 @@ body {
     margin: 0 auto;
 }
 
+/*SE CONOCE COMO UNA CLASS UTILITY*/
+.nav-bg {
+    background-color: var(--secundario);
+}
+
 .navegacion-principal {
     background-color: var(--secundario);
 }
