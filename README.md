@@ -18,7 +18,7 @@ Aunque el proyecto está basado en un curso de Udemy, se han hecho los siguiente
 ## Vista Previa
 
 [Visita el sitio web](https://desingfreelancer-aikarubi.netlify.app/)  
-![Vista previa del proyecto](ruta-de-la-imagen)
+![Vista previa del proyecto](/assets/img/screenshot/view.png)
 
 ## Características
 
