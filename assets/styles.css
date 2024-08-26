@@ -13,14 +13,14 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    scroll-snap-type: y mandatory;
     /* Hack para Box Model */
+    /*scroll-snap-type: y mandatory;*/
 }
 
-.servicios, .navegacion-principal, .formulario {
+/*.servicios, .navegacion-principal, .formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+}*/
 
 *,
 *:before,
@@ -38,6 +38,11 @@ body {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+}
+
+.contenedor-nosotros {
+    max-width: 105rem;
+    margin: 2rem auto;
 }
 
 .boton {
@@ -128,7 +133,7 @@ h3 {
 @media (min-width: 480px) {
     .navegacion-principal {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 }
 
@@ -137,6 +142,7 @@ h3 {
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
+    transition: background-color 0.3s ease;
 }
 
 .navegacion-principal a:hover {
@@ -217,6 +223,21 @@ h3 {
     align-items: center;
 }
 
+/* Animaciones suaves para íconos */
+.iconos svg {
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.iconos svg:hover {
+    transform: rotate(10deg) scale(1.1);
+    stroke: var(--grisClaro);
+}
+
+.iconos svg:active {
+    transform: rotate(-5deg) scale(0.95);
+    stroke: var(--grisClaro);
+}
+
 /*Formulario de Contacto*/
 .formulario {
     background-color: var(--gris-con-opacidad);
@@ -281,4 +302,35 @@ h3 {
 
 .footer {
     text-align: center;
+}
+
+/* Sección Nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .texto-nosotros {
+        padding-left: 2rem;
+    }
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.texto-nosotros p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
